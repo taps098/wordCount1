@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "home.html" %}
+  {%block body_block%}
+    <h1>Lets count the words</h1>
+
+    <h2>Enter your text in below form</h2>
+
+    <form class="" action="{% url 'result' %}" method="get">
+      <textarea name="UserInput" rows="8" cols="80"></textarea>
+      <br>
+      <input type="submit" value="count">
+      <a href="{% url 'about' %}"><input type="button" name="" value="about"></a>
+
+    </form>
+
+    {% endblock %}

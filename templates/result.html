@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends "home.html" %}
+  {%block body_block%}
+    <h2>There are {{wordCount}} words in you input!</h2>
+    <h2>you have entered the below text</h2>
+    {{input}}
+
+    <h3>Word count is: </h3>
+    {% for word, count in wordCountList%}
+    <h3>{{ word }} - {{ count }} </h3>
+    {% endfor %}
+
+    <a href="{% url 'count' %}">start Again</a>
+    {% endblock %}
